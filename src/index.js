@@ -13,7 +13,7 @@ const PORT = config.port;
 // const MONGODB_URL = 'mongodb://127.0.0.1:27017/qkart'; //localhost:by_defaultPortForMOngoDb 
 
 
-mongoose.connect(MONGODB_URL).then(()=>{
+mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{
     console.log("Mongodb database connected...")
 
     app.listen(PORT,()=>{
